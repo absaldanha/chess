@@ -9,6 +9,7 @@ if ENV["COVERAGE"]
 end
 
 require "bundler/setup"
+require "chess"
 require "minitest/autorun"
 require "minitest/reporters"
 
