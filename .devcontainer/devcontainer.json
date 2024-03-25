@@ -1,0 +1,43 @@
+{
+  "name": "chess",
+  "dockerComposeFile": "compose.yaml",
+  "service": "lib",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "KoichiSasada.vscode-rdbg",
+        "Shopify.ruby-extensions-pack",
+        "MS-CEINTL.vscode-language-pack-pt-BR"
+      ],
+      "settings": {
+        "workbench.colorTheme": "Spinel",
+        "editor.tabSize": 2,
+        "editor.renderWhitespace": "all",
+        "editor.snippetSuggestions": "top",
+        "files.insertFinalNewline": true,
+        "editor.rulers": [
+          80,
+          100
+        ],
+        "emmet.showSuggestionsAsSnippets": true,
+        "[ruby]": {
+          "editor.defaultFormatter": "Shopify.ruby-lsp",
+          "files.trimTrailingWhitespace": true,
+          "editor.semanticHighlighting.enabled": true
+        },
+        "rubyLsp.enableExperimentalFeatures": true,
+        "rubyLsp.enabledFeatures": {
+          "codeActions": false,
+          "diagnostics": false,
+          "formatting": false,
+          "onTypeFormatting": false
+        },
+        "editor.formatOnSave": true
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+services:
+  lib: &lib
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ../..:/workspaces:cached
+      - bundle:/usr/local/bundle
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
+    networks:
+      - default
+
+volumes:
+  bundle:
